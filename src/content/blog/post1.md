@@ -1,56 +1,33 @@
 ---
-title: "Demo Post 1"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 10 2022"
-heroImage: "/post_img.webp"
-tags: ["tokio"]
+title: "Reflections of The Lean Startup"
+description: "Recently read the book 'The Lean Startup' by Eric Ries. Here are my thoughts: "
+pubDate: "April 1 2025"
+heroImage: "/theleanstartup.png"
+tags: ["business"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
-platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada
-fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst
-quisque sagittis purus sit amet.
+- 
+I recently read the book "The Lean Startup" by Eric Ries. For me, it offered a few new perspectives to use when looking at startups, along with advice on what to do if I ever create one. 
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum
-quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.
-Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.
-Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit
-ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt
-dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus
-arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed
-tempus urna et pharetra pharetra massa massa ultricies mi.
+The book starts by talking about the difference between startups and pre-established companies. Ries talks about how startups need to stay much more flexible than established companies because they don't know what their customers want, and thus, they don't know what approaches are best for finding customers or creating a sustainable business. They'd be deceiving themselves to adopt fixed plans with set milestones as a established company would. Instead, startups have to be able to quickly change direction if needed, while still having an overview of the situation, keeping the company steered toward its goal. 
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam
-sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec.
-Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna
-fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et
-egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel
-turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra
-nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim
-praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus
-egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam
-ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor
-purus non. Amet dictum sit amet justo donec enim.
+For a startup to become more than just a hobby project, they need to find a business model that is profitable and importantly, sustainable. The most detailed plans will be rendered futile without a good business model. 
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut
-consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra.
-Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor
-dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor
-dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque
-eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices
-tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Ries believes that the best way to find a sustainable business model is through a process of validated learning, essentially the scientific method. He mentions the example of a shoe store called Zappos. They started out with the presumption that people would be willing to buy shoes online. To test that presumption, instead of actually manufacturing shoes, they took photos of shoes in stores instead and displayed those photos in a fake website. Zappos saw that people trying to buy the shoes, showing that their presumption was valid, allowing them to actually start manufacturing shoes. 
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt
-dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat
-sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
-Egestas integer eget aliquet nibh praesent tristique magna.
+In addition, startups should be testing two hypothesis's with their customers. The first one is the value hypothesis, which assumes that a product will deliver value to its customers, allowing early adopters will embrace the product, e.g use it often. The second is the growth hypothesis, which assumes that not only will the product appeal to the early adopters from the value hypothesis, but also to a larger bigger market later. Ries brings up Facebook here, discussing how they validated the value hypothesis by seeing that registered users logged in at least once or twice a day, and were very active, They validated the growth hypothesis after that by giving it to other colleges, as it spread to around 3/4 of the college students in the colleges where Facebook had been introduced. 
+
+Up until now, most of the concepts that had been discussed in the book were things I had learned or heard about from Youtube Videos or other books. The first new idea that resonated with me were BML (Build, measure, learn) loops, where the idea is to build as fast and as often as possible. A startup should never assume that they know which products to build or be out of touch with the real world. Instead, startups need to show their product to customers, gather their feedback and learn from it. 
+
+The first step of a BML loop is to build a MVP, or minimal viable product, something as simple as possible to give a customers a realistic experience of how the product would work, like Zappos did with the photos of shoes. Using that MVP, startups should get customer feedback and opinions, and then using that data, build a new MVP, repeating the cycle. This can also be done with new features, except with two versions of the product instead, allowing companies to distinguish between the valuable features and the waste features. 
+
+BML loops were the first completely new idea to me when reading this book, as I initially had thought it would be better for startups to attempt and make a splash with a refined product instead, as that would gather immediate interest instead. However, looking back, building a refined product comes with a lot more risks than just an MVP, especially if customers don't like the product. 
+
+After that, Ries discusses another new concept to me, which were growth engines, e.g ways of making sure your company does not stagnate. He discusses 3 types, sticky engines, viral engines, and paid engines. Sticky engines seemed the simplest to me, where the idea was to ensure that you retain your existing customers who already generate a stream of revenue for you, trying to make them use the product as often as possible. On the other hand, a viral engine uses your existing customers to market the product for you, saving costs. An example of this would be Hotmail's automatic email signature, which read "P.S. Get your free e-mail at Hotmail". The third type of engine, paid, avoids this. Instead, paid engines work by directly investing into marketing, though this is only sustainable if the existing customers bring in enough revenue to ensure the costs per user acquisition are lower than the money you get from those users. Startups should only focus on one engine of growth at the beginning, as this allows you to quickly access the success of new features, and keep your goals streamlined. 
+
+Growth engines got me to start thinking how every traditional company has used a different growth engine in some form to grow their company. For example, I recently read the book "Google It", by Anna Crowley Redding, on how the company Google started. At the beginning, when Larry Page and Sergey Brin were just two Stanford college students, they turned to the viral engine, getting as many of their classmates to use the platform as possible. If they had tried to use the paid engine, they'd have gone broke quickly, as initially, they weren't making money at all, let alone enough to pay for ads. 
+
+The last part of the book discusses metrics, and as someone who loves stats and numbers, I found that really interesting to. Ries discusses the idea of examining the right metrics, and to make sure to avoid vanity metrics, which are numbers that look good but don't bring the startup closer to its goals. It's similar to sports where sometimes, a player has really good numbers in one category, making them look like they had a game, but in reality, they contributed very little. 
+
+Ries also discusses making sure to identify the right "core metrics" early on, e.g metrics that would be the most critical or most helpful to see the growth of the company. These could be things like number of paying customers, average session length per customer, and the number of recommendations per 1000 customers. It helped me realize how important it would be for a startup to prioritize as much as possible, and keep themselves as streamlined as possible, with the sole goal of finding a sustainable business model. 
+Reading "The Lean Startup" definitely helped me understand more about startups and how they should be operating, something I hadn't thought about much before. Personally, I think that some parts of the book did get repetitive at some times, with the author drawing in a lot of examples to convey his points, but otherwise, the writing was very good, and concepts like BML loops and growth engines are definitely ideas I'm going to look into more in the future. 
