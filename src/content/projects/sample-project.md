@@ -1,10 +1,11 @@
 ---
-title: "Sample Project"
+title: "Performance notes: breathing and musical intent"
 date: "2024-06-15"
-excerpt: "A comprehensive guide to musical performance and breathing techniques."
+excerpt: "Notes on musical performance fundamentals and breathing—how I think about sound, air, and tension on stage."
+tags: [Music, Performance]
 ---
 
-# Sample Project
+# Performance notes
 
 ## Musical Performance Fundamentals
 

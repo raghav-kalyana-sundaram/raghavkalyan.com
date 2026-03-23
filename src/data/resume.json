@@ -1,0 +1,25 @@
+{
+  "headline": "Raghav Kalyan",
+  "tagline": "Writer, builder, and lifelong learner",
+  "summary": "I write about technology, learning, and ideas—and share longer essays on Substack. This page is a concise CV-style view; for narrative and latest work, start from the home page or articles. (I’m still filling in the timeline below.)",
+  "experience": [
+    {
+      "title": "Roles & impact (updating)",
+      "organization": "—",
+      "period": "—",
+      "bullets": [
+        "I’m updating this section with concrete roles and outcomes.",
+        "In the meantime, see Projects and Articles for what I’m working on and how I think."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Education (updating)",
+      "school": "—",
+      "period": "—"
+    }
+  ],
+  "skills": ["Writing", "Research", "Software", "Music performance"],
+  "pdfUrl": null
+}

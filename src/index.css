@@ -2,15 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F0F4F8;
-    color: #1a202c; /* A slightly softer black for better readability */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+:root {
+    --page: oklch(0.97 0.012 250);
+    --surface: oklch(0.99 0.008 250);
+    --surface-muted: oklch(0.94 0.02 250);
+    --elevated: oklch(1 0.005 250);
+    --fg: oklch(0.22 0.04 260);
+    --muted: oklch(0.42 0.04 260);
+    --subtle: oklch(0.58 0.03 260);
+    --border: oklch(0.88 0.02 250);
+    --accent: oklch(0.48 0.14 250);
+    --accent-hover: oklch(0.42 0.16 250);
+    --on-accent: oklch(0.99 0.01 250);
+    --code-bg: oklch(0.94 0.02 250);
+    --code-fg: oklch(0.28 0.04 260);
+    --hero-mesh-a: color-mix(in oklab, var(--accent) 35%, transparent);
+    --hero-mesh-b: color-mix(in oklab, var(--accent) 12%, transparent);
 }
 
-/* Custom utilities */
+/*
+ * Dark: layered surfaces (base < cards < elevated), like semantic materials —
+ * see https://developer.apple.com/documentation/uikit/supporting-dark-mode-in-your-interface
+ * Class-based toggle + color-scheme pairs with Tailwind’s darkMode: 'class'
+ * (https://tailwindcss.com/docs/dark-mode).
+ */
+html {
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+.dark {
+    /* Base is darkest; each step lifts slightly — depth without heavy shadows */
+    --page: oklch(0.165 0.01 262);
+    --surface: oklch(0.205 0.012 261);
+    --surface-muted: oklch(0.238 0.013 260);
+    --elevated: oklch(0.275 0.015 259);
+    --fg: oklch(0.93 0.007 260);
+    --muted: oklch(0.7 0.016 262);
+    --subtle: oklch(0.535 0.018 262);
+    --border: color-mix(in oklab, var(--fg) 10%, var(--page));
+    /* Muted sky — readable, not neon-on-dark */
+    --accent: oklch(0.72 0.055 252);
+    --accent-hover: oklch(0.78 0.058 252);
+    --on-accent: oklch(0.16 0.02 262);
+    --code-bg: oklch(0.198 0.011 261);
+    --code-fg: oklch(0.9 0.012 260);
+    --hero-mesh-a: color-mix(in oklab, var(--fg) 5%, transparent);
+    --hero-mesh-b: color-mix(in oklab, var(--accent) 8%, transparent);
+}
+
+@layer base {
+    .skip-to-content {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        z-index: 100;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background: var(--elevated);
+        border: 1px solid var(--border);
+        color: var(--fg);
+        font-weight: 600;
+        font-size: 0.875rem;
+        transform: translateY(-200%);
+        transition: transform 0.15s ease;
+    }
+
+    .skip-to-content:focus {
+        transform: translateY(0);
+    }
+
+    body {
+        font-family: 'Source Sans 3', system-ui, sans-serif;
+        background-color: var(--page);
+        color: var(--fg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+        background: color-mix(in oklab, var(--accent) 28%, transparent);
+        color: var(--fg);
+    }
+
+    .dark ::selection {
+        background: color-mix(in oklab, var(--accent) 26%, var(--surface));
+        color: var(--fg);
+    }
+}
+
 @layer utilities {
     .line-clamp-3 {
         display: -webkit-box;
@@ -18,7 +101,6 @@ body {
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
-    
     .line-clamp-2 {
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -27,31 +109,184 @@ body {
     }
 }
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Focus styles for better accessibility */
-*:focus {
-    outline: 2px solid #007BFF;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+@media print {
+    body {
+        background: white !important;
+    }
+}
+
+*:focus-visible {
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--surface-muted);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
+    background: var(--subtle);
     border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
+/* Scroll reveal (motion-safe only) */
+@media (prefers-reduced-motion: no-preference) {
+    .js-reveal {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+            opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+            transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .js-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Syntax highlighting (hljs) — light */
+:not(.dark) .hljs-comment,
+:not(.dark) .hljs-quote {
+    color: #6a737d;
+}
+:not(.dark) .hljs-keyword,
+:not(.dark) .hljs-selector-tag,
+:not(.dark) .hljs-subst {
+    color: #d73a49;
+}
+:not(.dark) .hljs-number,
+:not(.dark) .hljs-literal,
+:not(.dark) .hljs-variable,
+:not(.dark) .hljs-template-variable,
+:not(.dark) .hljs-tag .hljs-attr {
+    color: #005cc5;
+}
+:not(.dark) .hljs-string,
+:not(.dark) .hljs-doctag {
+    color: #032f62;
+}
+:not(.dark) .hljs-title,
+:not(.dark) .hljs-section,
+:not(.dark) .hljs-selector-id {
+    color: #6f42c1;
+}
+:not(.dark) .hljs-subst {
+    font-weight: normal;
+}
+:not(.dark) .hljs-type,
+:not(.dark) .hljs-class .hljs-title {
+    color: #6f42c1;
+}
+:not(.dark) .hljs-tag,
+:not(.dark) .hljs-name,
+:not(.dark) .hljs-attribute {
+    color: #22863a;
+}
+:not(.dark) .hljs-regexp,
+:not(.dark) .hljs-link {
+    color: #032f62;
+}
+:not(.dark) .hljs-symbol,
+:not(.dark) .hljs-bullet {
+    color: #e36209;
+}
+:not(.dark) .hljs-built_in,
+:not(.dark) .hljs-builtin-name {
+    color: #005cc5;
+}
+:not(.dark) .hljs-meta {
+    color: #6a737d;
+}
+:not(.dark) .hljs-deletion {
+    background: #ffeef0;
+}
+:not(.dark) .hljs-addition {
+    background: #e6ffed;
+}
+:not(.dark) .hljs-emphasis {
+    font-style: italic;
+}
+:not(.dark) .hljs-strong {
+    font-weight: bold;
+}
+
+/* Syntax highlighting — dark: low-chroma, matches layered UI */
+.dark .hljs-comment,
+.dark .hljs-quote {
+    color: oklch(0.55 0.018 262);
+}
+.dark .hljs-keyword,
+.dark .hljs-selector-tag,
+.dark .hljs-subst {
+    color: oklch(0.72 0.06 25);
+}
+.dark .hljs-number,
+.dark .hljs-literal,
+.dark .hljs-variable,
+.dark .hljs-template-variable,
+.dark .hljs-tag .hljs-attr {
+    color: oklch(0.68 0.045 252);
+}
+.dark .hljs-string,
+.dark .hljs-doctag {
+    color: oklch(0.74 0.04 252);
+}
+.dark .hljs-title,
+.dark .hljs-section,
+.dark .hljs-selector-id {
+    color: oklch(0.76 0.05 275);
+}
+.dark .hljs-type,
+.dark .hljs-class .hljs-title {
+    color: oklch(0.72 0.05 75);
+}
+.dark .hljs-tag,
+.dark .hljs-name,
+.dark .hljs-attribute {
+    color: oklch(0.7 0.05 155);
+}
+.dark .hljs-regexp,
+.dark .hljs-link {
+    color: oklch(0.7 0.04 252);
+}
+.dark .hljs-symbol,
+.dark .hljs-bullet {
+    color: oklch(0.68 0.05 75);
+}
+.dark .hljs-built_in,
+.dark .hljs-builtin-name {
+    color: oklch(0.68 0.045 252);
+}
+.dark .hljs-meta {
+    color: oklch(0.52 0.016 262);
+}
+
+.prose pre {
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.prose pre code {
+    background: transparent !important;
+    color: var(--code-fg) !important;
+    word-break: normal;
+    white-space: pre;
 }
