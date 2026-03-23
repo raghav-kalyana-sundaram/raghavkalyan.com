@@ -8,7 +8,7 @@ export const DEFAULT_OG_IMAGE = '/og-default.svg';
 export const SOCIAL_PROFILES = [
     { name: 'GitHub', url: 'https://github.com/raghav-kalyana-sundaram' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/raghav-kalyan-4b7654287/' },
-    { name: 'Twitter', url: 'https://twitter.com/raghavkalyan' },
+    { name: 'Twitter', url: 'https://x.com/raghavkalyan_' },
     { name: 'YouTube', url: 'https://www.youtube.com/@raghavkalyan17' },
     { name: 'Instagram', url: 'https://www.instagram.com/raghav._kalyan/' },
 ];
